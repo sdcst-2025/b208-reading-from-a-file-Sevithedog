@@ -14,6 +14,10 @@ def find(needle):
     file  = open(filename, 'r')
     data = file.read()
     line = data.split("\n")
+    for i in range(len(line)):
+        if line[i] == needle:
+            return i
+            
     
 
     pass

@@ -7,3 +7,34 @@ Read the contents of task03.txt into your program and determine the points value
 
 For sample data task03.txt, the largest sum should be 68787
 """
+def lsum(file):
+    lines = file.read()
+    print(lines)
+    line = lines.split('\n')
+    print(line)
+    clusters = []
+    templist = []
+    for i in line:
+        if i != '' :
+            templist.append(i)
+        else:
+            clusters.append(templist)
+    print(clusters)
+    counter = 0 
+    for i in clusters:
+        if sum(i) > counter:
+            counter = sum(i)
+    print(counter)
+    return
+            
+
+
+file = open('task03.txt', 'r')
+
+""" for i in listoflists:
+        if sum(i) > counter
+        counter = sum(i)
+
+"""
+lsum(file)
+    
