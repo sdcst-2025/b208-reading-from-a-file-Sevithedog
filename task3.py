@@ -19,11 +19,13 @@ def lsum(file):
             templist.append(i)
         else:
             clusters.append(templist)
+            templist = []
     print(clusters)
     counter = 0 
     for i in clusters:
-        if sum(i) > counter:
-            counter = sum(i)
+        n = [float(x) for x in i]
+        if sum(n) > counter:
+            counter = sum(n)
     print(counter)
     return
             

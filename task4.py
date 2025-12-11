@@ -13,7 +13,15 @@ Create a function that reads the specific value for a specific level and an armo
 """
 
 def target(lvl,ac):
-    return
+    file = open('task04.txt', 'r')
+    data = file.read()
+    levels = data.split('\n')
+    nlevels = []
+    for i in levels:
+        n = i.split()
+        nlevels.append(n)
+    targ = float(nlevels[lvl-1][abs(ac-10)])
+    return targ
 
 
 def tests():
